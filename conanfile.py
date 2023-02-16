@@ -31,7 +31,7 @@ class LiboauthcppConan(ConanFile):
     def source(self):
         #self.run("git clone https://github.com/sirikata/liboauthcpp")
         url = "https://github.com/sirikata/liboauthcpp/archive/2893f1bf42e1dfd5acf0dd849519cf27ac9c7395.tar.gz"
-        tools.get(url=url, strip_root=True, destination=self._source_subfolder)
+        tools.get(url=url, strip_root=True, destination=self._source_subfolder, verify=False)
 
     def config_options(self):
         if self.settings.os == "Windows":
